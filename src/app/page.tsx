@@ -1,19 +1,19 @@
-import  { Suspense } from 'react'
+import { Suspense } from 'react'
+import { Button, Slow } from '@/components/main'
 import { home } from '@/app/css'
-import {  Slow, Button } from '@/components/main'
 
 
 export default async function HomePage() {
-	'use cache'
+    'use cache'
 
-	return (
-		<main style={home}>
-			<Button/>
-			<Suspense fallback={<p>Loading...</p>}>
-				<Slow timeout={5000}/>
-			</Suspense>
-		</main>
-	);
+    return (
+        <main style={home}>
+            <Button/>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Slow timeout={5000}/>
+            </Suspense>
+        </main>
+    );
 }
 
 

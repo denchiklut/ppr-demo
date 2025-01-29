@@ -1,11 +1,11 @@
 const express = require('express')
 
 express()
-    .use('*',(req, res, next) => {
+    .use('*', (req, res, next) => {
         const ms = Number(req.query.ms ?? 3000)
 
         setTimeout(() => {
-            res.send({ ms, random: Math.floor(Math.random() * 1000) })
+            res.send({ms, random: Math.floor(Math.random() * 1000)})
             next()
         }, ms)
 
